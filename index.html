@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JuneMockups – Poster Mockup Generator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <span class="logo">June<em>Mockups</em></span>
+    <span class="tag">Poster-Mockup-Generator</span>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="intro">
+    <h1>Dein Design, an der Wand.</h1>
+    <p>Lade dein Poster-Design hoch – es wird automatisch perspektivisch in den Rahmen eingepasst, inklusive Licht &amp; Schatten der Originalaufnahme.</p>
+  </section>
+
+  <section class="app">
+    <div class="preview-pane">
+      <div id="dropzone" class="canvas-wrap">
+        <canvas id="stage"></canvas>
+        <div class="drop-hint" id="dropHint">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 16V4M12 4l-4 4M12 4l4 4"/><path d="M4 16v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></svg>
+          <span>Design hierher ziehen<br>oder klicken zum Auswählen</span>
+        </div>
+        <div class="loading" id="loading" hidden>Rendere…</div>
+      </div>
+    </div>
+
+    <aside class="controls">
+      <div class="control-block">
+        <label class="btn primary" for="fileInput">
+          Eigenes Design hochladen
+          <input type="file" id="fileInput" accept="image/*" hidden>
+        </label>
+        <button class="btn ghost" id="resetBtn" type="button">Platzhalter zurücksetzen</button>
+      </div>
+
+      <div class="control-block">
+        <label class="slider-label" for="shadowRange">Licht &amp; Schatten <span id="shadowVal">100%</span></label>
+        <input type="range" id="shadowRange" min="0" max="100" value="100">
+      </div>
+
+      <div class="control-block">
+        <button class="btn download" id="downloadBtn" type="button">Mockup herunterladen</button>
+        <p class="hint">PNG, volle Auflösung (1826×2738px)</p>
+      </div>
+    </aside>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">Alles läuft lokal in deinem Browser – es wird nichts hochgeladen.</div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
